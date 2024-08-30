@@ -15,7 +15,13 @@
 1. **🌐 环境变量配置支持**：
    - 现在可以通过 Docker 容器的环境变量来动态配置数据库连接信息。以下是环境变量的使用示例：
      ```bash
-     docker run -d --name holiday-app -p 8001:8001 -e DB_HOST=mydbhost -e DB_PORT=3306 -e DB_NAME=holidaydb -e DB_USERNAME=root -e DB_PASSWORD=secret smileyxy/holiday:latest
+     docker run -d --name holiday-app -p 8080:8080 \
+     -e DB_HOST=mydbhost \
+     -e DB_PORT=3306 \
+     -e DB_NAME=holidaydb \
+     -e DB_USERNAME=root \
+     -e DB_PASSWORD=secret \
+     smileyxy/holiday:latest
      ```
    - 这些环境变量使您可以灵活地在不同的环境中部署应用程序，无需修改代码或配置文件。
 
@@ -28,6 +34,19 @@
    - 在浏览器中访问 `http://localhost:8001` 即可使用该应用。
 
 > **💡 提示**：此镜像基于 [Haoshenqi0123/holiday](https://github.com/Haoshenqi0123/holiday) 项目构建，并作出了一些定制化调整。
+
+
+## ⚙️ 环境变量说明
+
+| 环境变量名       | 功能描述                                                                 | 使用示例                      |
+|----------------|------------------------------------------------------------------------|-----------------------------|
+| 🌐 `DB_HOST`    | 指定数mysql服务器的主机地址。通常是数据库服务器的 IP 地址或主机名。                      | `-e DB_HOST=mydbhost`       |
+| 🌐 `DB_PORT`    | 指定mysql服务器的端口号。默认 MySQL 数据库通常使用 `3306` 端口。                      | `-e DB_PORT=3306`           |
+| 📂 `DB_NAME`    | 指定要连接的数据库名称。确保该数据库已在服务器上创建并可访问。                           | `-e DB_NAME=holidaydb`      |
+| 👤 `DB_USERNAME`| 指定用于连接mysql的用户名。                          | `-e DB_USERNAME=root`       |
+| 🔑 `DB_PASSWORD`| 指定用于连接mysql的密码。                 | `-e DB_PASSWORD=secret`     |
+
+---
 
 ## 直接使用
 
