@@ -40,15 +40,15 @@ jobs:
     - name: Log in to Docker Hub
       uses: docker/login-action@v2
       with:
-        username: smileyxy
-        password: dckr_pat_pc76gBlGxeqdrb24WnLzLsqd7ak
+        username: ${{ DOCKERHUB_USERNAME }}
+        password: ${{ DOCKERHUB_TOKEN }}
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
       with:
         context: .
         push: true
-        tags: smileyxy/holiday:latest
+        tags: ${{ DOCKERHUB_USERNAME }}/holiday:latest
 
     - name: Log out from Docker Hub
       run: docker logout
