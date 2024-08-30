@@ -40,9 +40,9 @@
 
 | 环境变量名       | 功能描述                                                                 | 使用示例                      |
 |----------------|------------------------------------------------------------------------|-----------------------------|
-| 🌐 `DB_HOST`    | 指定数mysql服务器的主机地址。通常是数据库服务器的 IP 地址或主机名。                      | `-e DB_HOST=mydbhost`       |
-| 🌐 `DB_PORT`    | 指定mysql服务器的端口号。默认 MySQL 数据库通常使用 `3306` 端口。                      | `-e DB_PORT=3306`           |
-| 📂 `DB_NAME`    | 指定要连接的数据库名称。确保该数据库已在服务器上创建并可访问。                           | `-e DB_NAME=holidaydb`      |
+| 🌐 `DB_HOST`    | 指定数mysql服务器的主机地址。                      | `-e DB_HOST=mydbhost`       |
+| 🌐 `DB_PORT`    | 指定mysql服务器的端口号。                      | `-e DB_PORT=3306`           |
+| 📂 `DB_NAME`    | 指定要连接的数据库名称。                           | `-e DB_NAME=holidaydb`      |
 | 👤 `DB_USERNAME`| 指定用于连接mysql的用户名。                          | `-e DB_USERNAME=root`       |
 | 🔑 `DB_PASSWORD`| 指定用于连接mysql的密码。                 | `-e DB_PASSWORD=secret`     |
 
