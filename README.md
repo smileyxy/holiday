@@ -31,7 +31,13 @@
      docker pull smileyxy/holiday:latest
      docker run -d --name holiday-app -p 8001:8001 smileyxy/holiday:latest
      ```
-   - 在浏览器中访问 `http://localhost:8001` 即可使用该应用。
+   - 在浏览器中访问
+   ```bash
+   http://locaohost:8001/holiday/today
+   http://locaohost:8001/holiday?date=2019-05-01
+   http://locaohost:8001/holiday?date=2019-05
+   http://locaohost:8001/holiday?date=2019
+   ```
 
 > **💡 提示**：此镜像基于 [Haoshenqi0123/holiday](https://github.com/Haoshenqi0123/holiday) 项目构建，并作出了一些定制化调整。
 
