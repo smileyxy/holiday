@@ -66,9 +66,26 @@
 - 服务器资源有限，访问过于频繁会把ip加入黑名单，一天后自动解除。
 ``` 
 
+## ✨ 新增功能和使用方法
 
-## 打赏
+本项目已经增加了以下新功能：
 
-<img src="https://oss.haoshenqi.top/pay/IMG_2690.JPG" width = "400" height = "400" alt="支付宝" align=center>
+1. **🌐 环境变量配置支持**：
+   - 现在可以通过 Docker 容器的环境变量来动态配置数据库连接信息。以下是环境变量的使用示例：
+     ```bash
+     docker run -d --name holiday-app -p 8001:8001      -e DB_HOST=mydbhost      -e DB_PORT=3306      -e DB_NAME=holidaydb      -e DB_USERNAME=root      -e DB_PASSWORD=secret      smileyxy/holiday:latest
+     ```
+   - 这些环境变量使您可以灵活地在不同的环境中部署应用程序，无需修改代码或配置文件。
 
-<img src="https://oss.haoshenqi.top/pay/IMG_2692.JPG" width = "400" height = "400" alt="微信" align=center>
+2. **🚀 自动化构建和发布**：
+   - 使用 GitHub Actions 配置了自动化的 Docker 镜像构建与发布流程。每次代码推送到 `main` 分支时，都会自动触发构建并将最新镜像推送到 Docker Hub。
+
+3. **📄 使用方法**：
+   - 您可以通过以下命令拉取并运行最新的 Docker 镜像：
+     ```bash
+     docker pull smileyxy/holiday:latest
+     docker run -d --name holiday-app -p 8001:8001 smileyxy/holiday:latest
+     ```
+   - 在浏览器中访问 `http://localhost:8001` 即可使用该应用。
+
+> **💡 提示**：此镜像基于 [Haoshenqi0123/holiday](https://github.com/Haoshenqi0123/holiday) 项目构建，并作出了一些定制化调整。
