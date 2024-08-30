@@ -15,7 +15,7 @@
 1. **🌐 环境变量配置支持**：
    - 现在可以通过 Docker 容器的环境变量来动态配置数据库连接信息。以下是环境变量的使用示例：
      ```bash
-     docker run -d --name holiday-app -p 8080:8080 \
+     docker run -d --name holiday-app -p 8001:8001 \
      -e DB_HOST=mydbhost \
      -e DB_PORT=3306 \
      -e DB_NAME=holidaydb \
