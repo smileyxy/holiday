@@ -24,8 +24,9 @@
      smileyxy/holiday:latest
      ```
    - 这些环境变量使您可以灵活地在不同的环境中部署应用程序，无需修改代码或配置文件。
-
-2. **📄 手动执行数据库初始化脚本**（手动执行 SQL 脚本以在holidaydb数据库中创建 `holiday_date` 表）：
+   
+2. **📄 使用方法**：
+   - 手动执行数据库初始化脚本（手动执行 SQL 脚本以在holidaydb数据库中创建 `holiday_date` 表）：
    ```sql
    SET FOREIGN_KEY_CHECKS=0;
    
@@ -43,19 +44,18 @@
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
    ```
    
-3. **📄 使用方法**：
    - 您可以通过以下命令拉取并运行最新的 Docker 镜像：
-     ```bash
-     docker pull smileyxy/holiday:latest
-     docker run -d --name holiday-app -p 8001:8001 smileyxy/holiday:latest
-     ```
+    ```bash
+    docker pull smileyxy/holiday:latest
+    docker run -d --name holiday-app -p 8001:8001 smileyxy/holiday:latest
+    ```
    - 在浏览器中访问
-   ```bash
-   http://locaohost:8001/holiday/today
-   http://locaohost:8001/holiday?date=2019-05-01
-   http://locaohost:8001/holiday?date=2019-05
-   http://locaohost:8001/holiday?date=2019
-   ```
+    ```bash
+    http://locaohost:8001/holiday/today
+    http://locaohost:8001/holiday?date=2019-05-01
+    http://locaohost:8001/holiday?date=2019-05
+    http://locaohost:8001/holiday?date=2019
+    ```
 
 > **💡 提示**：此镜像基于 [Haoshenqi0123/holiday](https://github.com/Haoshenqi0123/holiday) 项目构建，并作出了一些定制化调整。
 
