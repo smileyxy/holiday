@@ -9,3 +9,10 @@ COPY ./target/holiday-2.0.0.jar /usr/src/app/my-app.jar
 
 # 设置容器启动时运行的命令
 CMD ["java", "-jar", "/usr/src/app/my-app.jar"]
+
+# 设置环境变量，默认情况下可以是空值，允许在运行容器时通过 `-e` 参数覆盖
+ENV DB_HOST=localhost
+ENV DB_PORT=3306
+ENV DB_NAME=magichouse-api
+ENV DB_USERNAME=root
+ENV DB_PASSWORD=password
