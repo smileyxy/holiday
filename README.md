@@ -57,7 +57,7 @@
     http://locaohost:8001/holiday?date=2019
     ```
 
-> **💡 提示**：此镜像基于 [Haoshenqi0123/holiday](https://github.com/Haoshenqi0123/holiday) 项目构建，并作出了一些定制化调整。
+> ## 💡 提示：此镜像基于 [Haoshenqi0123/holiday](https://github.com/Haoshenqi0123/holiday) 项目构建，并作出了一些定制化调整。
 
 
 ## ⚙️ 环境变量说明
