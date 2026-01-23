@@ -56,6 +56,10 @@
     http://locaohost:8001/holiday?date=2019-05
     http://locaohost:8001/holiday?date=2019
     ```
+   - 手动更新次年的法定节假日日期
+    ```bash
+    http://locaohost:8001/holiday/update
+    ```
 
 ## ⚙️ 环境变量说明
 
